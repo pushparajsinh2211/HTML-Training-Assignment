@@ -6,75 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
     <title>Dashboard-Company</title>
   </head>
   <body>
     <header>
       <div class="left-header">
-        <img class="icon" src="./images/menu-bar.svg" />
-        <img class="header-logo" src="./images/logo.svg" />
-        <div>
-          <img class="icon" src="./images/search-icon.svg" />
-          <p>Search</p>
+        <a href="#" class="hamburger-icon"
+          ><img class="icon" src="./images/menu-bar.svg"
+        /></a>
+
+        <a href="./index.html" class="header-logo"
+          ><img src="./images/logo.svg"
+        /></a>
+
+        <div class="search-box">
+          <a href="#" class="search-icon">
+            <img class="icon" src="./images/search-icon.svg" />
+          </a>
+          <input class="search-input" type="text" placeholder="Search" />
         </div>
       </div>
+
       <div class="right-header">
-        <img
-          class="icon"
-          src="./images/notification-icon.svg"
-          alt="notification-icon"
-        />
-        <img src="./images/profile.png" alt="profile-image" />
+        <a href="#" class="notification-icon"
+          ><img
+            class="icon"
+            src="./images/notification-icon.svg"
+            alt="notification-icon"
+        /></a>
+
+        <div class="profile-box">
+          <img
+            class="profile-image"
+            src="./images/profile.png"
+            alt="profile-image"
+          />
+          <p>John Doe</p>
+          <a href="#" class="down-arrow-icon"
+            ><img src="./images/downward-arrow.svg" alt="down-arrow-icon"
+          /></a>
+        </div>
       </div>
     </header>
-    <div class="dashboard-container">
-      <div class="side-navigation">
+    <section>
+      <nav>
         <ul>
           <li>
-            <div class="nav-icon-box">
-              <img class="icon" src="./images/dashboard-default.svg" alt="" />
+            <div class="nav-icon-box icon-box-active">
+              <img class="icon" src="./images/dashboard-active.svg" alt="" />
               <p>Dashboard</p>
             </div>
           </li>
           <li>
             <div class="nav-icon-box">
               <img class="icon" src="./images/graph-default.svg" alt="" />
-              <p>Dashboard</p>
+              <p>Analysis</p>
             </div>
           </li>
           <li>
             <div class="nav-icon-box">
               <img class="icon" src="./images/inbox-default.svg" alt="" />
-              <p>Dashboard</p>
+              <p>Inbox</p>
             </div>
           </li>
           <li>
             <div class="nav-icon-box">
               <img class="icon" src="./images/clock-default.svg" alt="" />
-              <p>Dashboard</p>
+              <p>History</p>
             </div>
           </li>
           <li>
             <div class="nav-icon-box">
               <img class="icon" src="./images/user-default.svg" alt="" />
-              <p>Dashboard</p>
+              <p>Users</p>
             </div>
           </li>
           <li>
             <div class="nav-icon-box">
               <img class="icon" src="./images/maintenance-default.svg" alt="" />
-              <p>Dashboard</p>
+              <p>Maintenance</p>
             </div>
           </li>
           <li>
             <div class="nav-icon-box">
               <img class="icon" src="./images/setting-default.svg" alt="" />
-              <p>Dashboard</p>
+              <p>Setting</p>
             </div>
           </li>
         </ul>
-      </div>
-      <div class="main-content"></div>
-    </div>
+      </nav>
+      <article>ajfd</article>
+    </section>
   </body>
 </html>
