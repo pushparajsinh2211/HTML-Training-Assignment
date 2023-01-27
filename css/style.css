@@ -118,7 +118,6 @@ a {
 /* ----- Dashboard ----- */
 /* Header */
 header {
-  display: flex;
   height: 80px;
   justify-content: space-between;
   align-items: center;
@@ -135,17 +134,12 @@ header {
   align-items: center;
 }
 
-.left-header .hamburger-icon {
-  margin: 0 29px;
-}
-
 .left-header .header-logo {
   margin: 0 75px 0 25px;
 }
 
 .left-header .header-logo img {
-  width: 140px;
-  height: 30px;
+  height: 2rem;
 }
 
 .left-header .search-box {
@@ -180,6 +174,7 @@ header {
 .right-header .profile-box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 60%;
 }
 
@@ -217,16 +212,23 @@ nav ul li {
   line-height: 21px;
 }
 
+.list-group-item {
+  border: none !important;
+}
+
 .nav-icon-box {
   display: flex;
   align-items: center;
-  margin: 5px 0;
-  padding: 0 40px 0 20px;
+  padding: 10px 40px 10px 20px;
   border-radius: 5px;
 }
 
 .nav-icon-box .icon {
   margin-right: 10px;
+}
+
+.nav-icon-box p {
+  margin: 0;
 }
 
 .icon-box-active {
@@ -239,4 +241,157 @@ article {
   width: 100%;
   background: #fafafa;
   padding: 40px 48px;
+}
+
+article h2 {
+  font-family: Roboto;
+  font-size: 30px;
+  font-family: 39px;
+}
+
+article .row {
+  column-gap: 1rem;
+}
+
+.feature-box {
+  display: flex;
+  padding: 5px 35px 5px 5px;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.feature-box .feature-icon {
+  display: flex;
+  width: 35px;
+  margin-right: 15px;
+}
+
+.feature-box h3 {
+  font-size: 25px;
+  line-height: 33px;
+  font-family: Roboto;
+  margin-top: 10px;
+}
+
+.feature-box p {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: #3e3e3e;
+  font-weight: normal;
+  padding: 0;
+}
+
+.sales-stats {
+  display: grid;
+  grid-template-columns: 3.5fr 1.5fr;
+  column-gap: 2rem;
+  margin: 30px 0 15px;
+}
+
+.sales-stats h3 {
+  font-size: 23px;
+  line-height: 29px;
+}
+
+.data-graph {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+.data-graph-title {
+  display: grid;
+  grid-template-columns: 8fr repeat(4, 1fr);
+}
+
+.data-graph-title p {
+  font-size: 15px;
+  line-height: 20px;
+  color: #adadad;
+}
+
+.sales-stats img {
+  width: 100%;
+}
+
+.pie-graph {
+  background: #fff;
+  border-radius: 5px;
+  padding: 1.5rem;
+}
+.pie-graph img {
+  display: flex;
+  margin-inline: auto;
+}
+
+.pie-graph-status {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.pie-graph-status p span {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.indicator {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.indicator-red {
+  background: #c8242f;
+}
+.indicator-green {
+  background: #a2b86c;
+}
+.indicator-orange {
+  background: #f16c20;
+}
+.indicator-yellow {
+  background: #ebc844;
+}
+
+.invoices {
+  margin: 40px 0;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.invoices h3 {
+  font-size: 23px;
+  line-height: 29px;
+}
+.invoices div a {
+  font-size: 12px;
+  line-height: 16px;
+  color: #c8242f !important;
+}
+
+th {
+  font-size: 15px;
+  line-height: 20px;
+  color: #adadad;
+  font-weight: normal;
+}
+table {
+  margin-top: 2rem;
+}
+tr {
+  line-height: 30px;
+}
+
+.badge-paid {
+  background: #ebffef;
+  color: #3cdd5f !important;
+}
+.badge-failed {
+  background: #fff5f5;
+  color: #ff4545 !important;
+}
+.badge-pending {
+  background: #f8f8f8;
+  color: #bababa !important;
 }
