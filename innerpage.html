@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Innerpage-Company</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="d-flex container-fluid">
+        <div class="left-header">
+          <a href="#" class="hamburger-icon mx-4"
+            ><img class="icon" src="./images/menu-bar.svg"
+          /></a>
+
+          <a href="./index.html" class="header-logo"
+            ><img src="./images/logo.svg"
+          /></a>
+
+          <div class="search-box">
+            <a href="#" class="search-icon">
+              <img class="icon" src="./images/search-icon.svg" />
+            </a>
+            <input class="search-input" type="text" placeholder="Search" />
+          </div>
+        </div>
+
+        <div class="right-header">
+          <a href="#" class="notification-icon px-2"
+            ><img
+              class="icon"
+              src="./images/notification-icon.svg"
+              alt="notification-icon"
+          /></a>
+
+          <div class="profile-box">
+            <img
+              class="profile-image"
+              src="./images/profile.png"
+              alt="profile-image"
+            />
+            <span class="px-1">John Doe</span>
+            <a href="#" class="down-arrow-icon px-1"
+              ><img src="./images/downward-arrow.svg" alt="down-arrow-icon"
+            /></a>
+          </div>
+        </div>
+      </header>
+      <section>
+        <div class="nav">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="nav-icon-box">
+                <img class="icon" src="./images/dashboard-default.svg" alt="" />
+                <a href="./dashboard.html">Dashboard</a>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="nav-icon-box icon-box-active">
+                <img class="icon" src="./images/graph-active.svg" alt="" />
+                <a href="./innerpage.html">Analysis</a>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="nav-icon-box">
+                <img class="icon" src="./images/inbox-default.svg" alt="" />
+                <a href="#">Inbox</a>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="nav-icon-box">
+                <img class="icon" src="./images/clock-default.svg" alt="" />
+                <a href="#">History</a>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="nav-icon-box">
+                <img class="icon" src="./images/user-default.svg" alt="" />
+                <a href="#">Users</a>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="nav-icon-box">
+                <img
+                  class="icon"
+                  src="./images/maintenance-default.svg"
+                  alt=""
+                />
+                <a href="#">Maintenance</a>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="nav-icon-box">
+                <img class="icon" src="./images/setting-default.svg" alt="" />
+                <a href="#">Setting</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <article>
+          <h2 class="title">Analysis</h2>
+
+          <div class="container-fluid py-4">
+            <div class="col-md-12 py-2">
+              <h3>One Column</h3>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Name"
+                aria-label="default input example"
+              />
+            </div>
+            <div class="col-md-12 py-2">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Dropdown</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-md-12 py-2">
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                placeholder="Multiple line"
+                rows="4"
+              ></textarea>
+            </div>
+          </div>
+          <div class="container-fluid py-2">
+            <div class="col-md-12 py-3">
+              <h3>Two Column</h3>
+              <div class="row">
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="floatingName"
+                      placeholder="name"
+                    />
+                    <label for="floatingName">Name</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingUserName"
+                      placeholder="johndoe"
+                    />
+                    <label for="floatingUserName">Username</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row py-3">
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="floatingInputPassword"
+                      placeholder="Password"
+                    />
+                    <label for="floatingInputPassword">Password</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <select class="form-select" aria-label="Default">
+                      <option selected>Dropdown</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <label for="">Dropdown</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid py-4">
+            <div class="col-md-12">
+              <h3>Three Column</h3>
+              <div class="row">
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInputEmail"
+                      placeholder="name@example.com"
+                    />
+                    <label for="floatingInputEmail">Focus</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Password"
+                      id="floatingInputPassword"
+                      aria-label="Password"
+                    />
+                    <label for="floatingInputPassword">Password</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="floatingInputDisabled"
+                      disabled
+                      placeholder="disabled"
+                      aria-label="disabled"
+                      style="border: 1px dashed #adadad"
+                    />
+                    <label for="floatingInput">Disabled</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid py-4">
+            <div class="col-md-12">
+              <h3>Four Column</h3>
+              <div class="row">
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="validationServer03"
+                      aria-describedby="validationServer03Feedback"
+                      value="UI Designer"
+                      required
+                    />
+                    <label for="validationServer03" class="form-label"
+                      >Designation</label
+                    >
+                    <div id="validationServer03Feedback" class="form-text">
+                      Enter Valid data
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="validationServer03"
+                      placeholder="Name"
+                      aria-describedby="validationServer03Feedback"
+                      required
+                    />
+                    <label for="validationServer03">Name</label>
+                    <div id="validationServer03Feedback" class="form-text">
+                      Enter your full Name as per ID
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingUserName"
+                      value="johndoe"
+                      required
+                    />
+                    <label for="floatingUserName" class="form-label"
+                      >Username</label
+                    >
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-floating">
+                    <select id="" class="form-select" aria-label="Default">
+                      <option selected>Select</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <label for="">Dropdown</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid py-4">
+            <div class="col-md-12">
+              <h3>Other Design Elements</h3>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

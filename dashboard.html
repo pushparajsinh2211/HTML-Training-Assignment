@@ -5,14 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/favicon.ico" />
-    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
     <title>Dashboard-Company</title>
   </head>
   <body>
-    <div class="flex-container">
+    <div class="container-fluid">
       <header class="d-flex container-fluid">
-        <div class="left-header">
+        <div class="left left-header">
           <a href="#" class="hamburger-icon mx-4"
             ><img class="icon" src="./images/menu-bar.svg"
           /></a>
@@ -29,7 +33,7 @@
           </div>
         </div>
 
-        <div class="right-header">
+        <div class="right right-header">
           <a href="#" class="notification-icon"
             ><img
               class="icon"
@@ -56,31 +60,31 @@
             <li class="list-group-item">
               <div class="nav-icon-box icon-box-active">
                 <img class="icon" src="./images/dashboard-active.svg" alt="" />
-                <p>Dashboard</p>
+                <a href="./dashboard.html">Dashboard</a>
               </div>
             </li>
             <li class="list-group-item">
               <div class="nav-icon-box">
                 <img class="icon" src="./images/graph-default.svg" alt="" />
-                <p>Analysis</p>
+                <a href="./innerpage.html">Analysis</a>
               </div>
             </li>
             <li class="list-group-item">
               <div class="nav-icon-box">
                 <img class="icon" src="./images/inbox-default.svg" alt="" />
-                <p>Inbox</p>
+                <a href="#">Inbox</a>
               </div>
             </li>
             <li class="list-group-item">
               <div class="nav-icon-box">
                 <img class="icon" src="./images/clock-default.svg" alt="" />
-                <p>History</p>
+                <a href="#">History</a>
               </div>
             </li>
             <li class="list-group-item">
               <div class="nav-icon-box">
                 <img class="icon" src="./images/user-default.svg" alt="" />
-                <p>Users</p>
+                <a href="#">Users</a>
               </div>
             </li>
             <li class="list-group-item">
@@ -90,13 +94,13 @@
                   src="./images/maintenance-default.svg"
                   alt=""
                 />
-                <p>Maintenance</p>
+                <a href="#">Maintenance</a>
               </div>
             </li>
             <li class="list-group-item">
               <div class="nav-icon-box">
                 <img class="icon" src="./images/setting-default.svg" alt="" />
-                <p>Setting</p>
+                <a href="#">Setting</a>
               </div>
             </li>
           </ul>
@@ -104,7 +108,7 @@
         <article>
           <h2 class="title">Dashboard</h2>
 
-          <div class="row">
+          <div class="row feature-row">
             <div class="feature-box col">
               <div>
                 <img class="feature-icon" src="./images/star.svg" />
@@ -198,113 +202,118 @@
               <h3>Invoices</h3>
               <a>View all</a>
             </div>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">INVOICE</th>
-                  <th scope="col">COMPANY NAME</th>
-                  <th scope="col">EMAIL</th>
-                  <th scope="col">DUE DATE</th>
-                  <th scope="col">STATUS</th>
-                  <th scope="col">AMOUNT</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>651535</td>
-                  <td>Public Adjusting Firm</td>
-                  <td>georgia.young@example.com</td>
-                  <td>24 May, 2020</td>
-                  <td>
-                    <span class="badge badge-paid">Paid</span>
-                  </td>
-                  <td>$47,800</td>
-                </tr>
-                <tr>
-                  <td>558612</td>
-                  <td>Other</td>
-                  <td>jessica.hanson@example.com</td>
-                  <td>24 May, 2020</td>
-                  <td>
-                    <span class="badge badge-paid">Paid</span>
-                  </td>
-                  <td>$98,000</td>
-                </tr>
-                <tr>
-                  <td>558612</td>
-                  <td>Vendor</td>
-                  <td>alma.lawson@example.com</td>
-                  <td>8 Sep, 2020</td>
-                  <td>
-                    <span class="badge badge-paid">Paid</span>
-                  </td>
-                  <td>$20,900</td>
-                </tr>
-                <tr>
-                  <td>558612</td>
-                  <td>Property Management Company</td>
-                  <td>kenzi.lawson@example.com</td>
-                  <td>22 Oct, 2020</td>
-                  <td>
-                    <span class="badge badge-paid">Paid</span>
-                  </td>
-                  <td>$10,570</td>
-                </tr>
-                <tr>
-                  <td>651535</td>
-                  <td>Subcontractor Company</td>
-                  <td>jackson.graham@example.com</td>
-                  <td>1 Feb, 2020</td>
-                  <td>
-                    <span class="badge badge-failed">Failed</span>
-                  </td>
-                  <td>$10,200</td>
-                </tr>
-                <tr>
-                  <td>653518</td>
-                  <td>Mortgage Company</td>
-                  <td>felicia.reid@example.com</td>
-                  <td>22 Oct, 2020</td>
-                  <td>
-                    <span class="badge badge-pending">Pending</span>
-                  </td>
-                  <td>$12,600</td>
-                </tr>
-                <tr>
-                  <td>487441</td>
-                  <td>TPA</td>
-                  <td>dolores.chambers@example.com</td>
-                  <td>21 Sep, 2020</td>
-                  <td>
-                    <span class="badge badge-paid">Paid</span>
-                  </td>
-                  <td>$11,170</td>
-                </tr>
-                <tr>
-                  <td>267400</td>
-                  <td>Fire Department</td>
-                  <td>nevaeh.simmons@example.com</td>
-                  <td>17 Oct, 2020</td>
-                  <td>
-                    <span class="badge badge-failed">Failed</span>
-                  </td>
-                  <td>$28,000</td>
-                </tr>
-                <tr>
-                  <td>449003</td>
-                  <td>Insurance Carrier</td>
-                  <td>curtis.weaver@example.com</td>
-                  <td>21 Sep, 2020</td>
-                  <td>
-                    <span class="badge badge-paid">Paid</span>
-                  </td>
-                  <td>$10,000</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">INVOICE</th>
+                    <th scope="col">COMPANY NAME</th>
+                    <th scope="col">EMAIL</th>
+                    <th scope="col">DUE DATE</th>
+                    <th scope="col">STATUS</th>
+                    <th scope="col">AMOUNT</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>651535</td>
+                    <td>Public Adjusting Firm</td>
+                    <td>georgia.young@example.com</td>
+                    <td>24 May, 2020</td>
+                    <td>
+                      <span class="badge badge-paid">Paid</span>
+                    </td>
+                    <td>$47,800</td>
+                  </tr>
+                  <tr>
+                    <td>558612</td>
+                    <td>Other</td>
+                    <td>jessica.hanson@example.com</td>
+                    <td>24 May, 2020</td>
+                    <td>
+                      <span class="badge badge-paid">Paid</span>
+                    </td>
+                    <td>$98,000</td>
+                  </tr>
+                  <tr>
+                    <td>558612</td>
+                    <td>Vendor</td>
+                    <td>alma.lawson@example.com</td>
+                    <td>8 Sep, 2020</td>
+                    <td>
+                      <span class="badge badge-paid">Paid</span>
+                    </td>
+                    <td>$20,900</td>
+                  </tr>
+                  <tr>
+                    <td>558612</td>
+                    <td>Property Management Company</td>
+                    <td>kenzi.lawson@example.com</td>
+                    <td>22 Oct, 2020</td>
+                    <td>
+                      <span class="badge badge-paid">Paid</span>
+                    </td>
+                    <td>$10,570</td>
+                  </tr>
+                  <tr>
+                    <td>651535</td>
+                    <td>Subcontractor Company</td>
+                    <td>jackson.graham@example.com</td>
+                    <td>1 Feb, 2020</td>
+                    <td>
+                      <span class="badge badge-failed">Failed</span>
+                    </td>
+                    <td>$10,200</td>
+                  </tr>
+                  <tr>
+                    <td>653518</td>
+                    <td>Mortgage Company</td>
+                    <td>felicia.reid@example.com</td>
+                    <td>22 Oct, 2020</td>
+                    <td>
+                      <span class="badge badge-pending">Pending</span>
+                    </td>
+                    <td>$12,600</td>
+                  </tr>
+                  <tr>
+                    <td>487441</td>
+                    <td>TPA</td>
+                    <td>dolores.chambers@example.com</td>
+                    <td>21 Sep, 2020</td>
+                    <td>
+                      <span class="badge badge-paid">Paid</span>
+                    </td>
+                    <td>$11,170</td>
+                  </tr>
+                  <tr>
+                    <td>267400</td>
+                    <td>Fire Department</td>
+                    <td>nevaeh.simmons@example.com</td>
+                    <td>17 Oct, 2020</td>
+                    <td>
+                      <span class="badge badge-failed">Failed</span>
+                    </td>
+                    <td>$28,000</td>
+                  </tr>
+                  <tr>
+                    <td>449003</td>
+                    <td>Insurance Carrier</td>
+                    <td>curtis.weaver@example.com</td>
+                    <td>21 Sep, 2020</td>
+                    <td>
+                      <span class="badge badge-paid">Paid</span>
+                    </td>
+                    <td>$10,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </article>
       </section>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
