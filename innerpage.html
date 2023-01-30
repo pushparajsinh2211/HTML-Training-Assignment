@@ -140,49 +140,51 @@
               <h3>Two Column</h3>
               <div class="row">
                 <div class="col">
-                  <div class="form-floating">
+                  <div class="inputContainer">
                     <input
                       type="text"
-                      class="form-control"
+                      class="input"
                       id="floatingName"
                       placeholder="name"
                     />
-                    <label for="floatingName">Name</label>
+                    <label for="floatingName" class="label">Name</label>
                   </div>
                 </div>
                 <div class="col">
-                  <div class="form-floating">
+                  <div class="inputContainer">
                     <input
                       type="email"
-                      class="form-control"
+                      class="input"
                       id="floatingUserName"
                       placeholder="johndoe"
                     />
-                    <label for="floatingUserName">Username</label>
+                    <label for="floatingUserName" class="label">Username</label>
                   </div>
                 </div>
               </div>
               <div class="row py-3">
                 <div class="col">
-                  <div class="form-floating">
+                  <div class="inputContainer">
                     <input
                       type="password"
-                      class="form-control"
+                      class="input"
                       id="floatingInputPassword"
                       placeholder="Password"
                     />
-                    <label for="floatingInputPassword">Password</label>
+                    <label for="floatingInputPassword" class="label"
+                      >Password</label
+                    >
                   </div>
                 </div>
                 <div class="col">
-                  <div class="form-floating">
-                    <select class="form-select" aria-label="Default">
+                  <div class="inputContainer">
+                    <select class="form-select input" aria-label="Default">
                       <option selected>Dropdown</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
                       <option value="3">Three</option>
                     </select>
-                    <label for="">Dropdown</label>
+                    <label for="" class="label">Dropdown</label>
                   </div>
                 </div>
               </div>
@@ -306,6 +308,132 @@
           <div class="container-fluid py-4">
             <div class="col-md-12">
               <h3>Other Design Elements</h3>
+
+              <div class="row mt-2">
+                <h4>File Upload</h4>
+
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-danger upload-btn"
+                    type="button"
+                    id="inputGroupFileAddon03"
+                    onclick="document.getElementById('getFile').click()"
+                  >
+                    <img src="./images/cloud-upload-icon.svg" /> Upload
+                  </button>
+
+                  <input type="file" id="getFile" style="display: none" />
+
+                  <div class="form-text my-2 px-2">No item selected</div>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <h4>Radio Button</h4>
+                <div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Option 1
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      checked
+                      value="red"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Option 2
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <h4>Checkbox</h4>
+                <div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="inlineCheckbox1"
+                      value="option1"
+                    />
+                    <label class="form-check-label" for="inlineCheckbox1"
+                      >Option 1</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="inlineCheckbox2"
+                      value="option2"
+                      checked
+                    />
+                    <label class="form-check-label" for="inlineCheckbox2"
+                      >Option 2</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <h4>Snackbar</h4>
+                <div class="row snackbar">
+                  <div class="col-sm-12 col-md-6 snack error-snack">
+                    <img
+                      class="snack-img"
+                      src="./images/error-icon.svg"
+                      alt="error-icon"
+                    />
+                    <p class="snack-txt">This is an error Message!</p>
+                  </div>
+                  <div class="col snack info-snack">
+                    <img
+                      class="snack-img"
+                      src="./images/info-icon.svg"
+                      alt="error-icon"
+                    />
+                    <p class="snack-txt">This is an information Message!</p>
+                  </div>
+                </div>
+                <div class="row snackbar">
+                  <div class="col-sm-12 col-md-6 snack warning-snack">
+                    <img
+                      class="snack-img"
+                      src="./images/warning-icon.svg"
+                      alt="error-icon"
+                    />
+                    <p class="snack-txt">This is a warning Message!</p>
+                  </div>
+                  <div class="col snack success-snack">
+                    <img
+                      class="snack-img"
+                      src="./images/success-icon.svg"
+                      alt="error-icon"
+                    />
+                    <p class="snack-txt">This is a success Message!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <h4>Call to Action</h4>
+              </div>
+
+              <div class="row mt-2">
+                <h4>Tabs</h4>
+              </div>
             </div>
           </div>
         </article>
