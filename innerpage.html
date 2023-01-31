@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/favicon.ico" />
 
+    <!-- Material Icon -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <!-- Custom CSS -->
@@ -17,9 +23,18 @@
     <div class="container-fluid">
       <header class="d-flex container-fluid">
         <div class="left-header">
-          <a href="#" class="hamburger-icon mx-4"
-            ><img class="icon" src="./images/menu-bar.svg"
-          /></a>
+          <button href="#" class="hamburger-icon mx-1" id="hamburger">
+            <img
+              class="icon menuIcon"
+              src="./images/menu-bar.svg"
+              onclick="openCloseSidebar()"
+            />
+            <img
+              class="icon closeIcon"
+              src="./images/close.png"
+              onclick="openCloseSidebar()"
+            />
+          </button>
 
           <a href="./index.html" class="header-logo"
             ><img src="./images/logo.svg"
@@ -55,7 +70,7 @@
         </div>
       </header>
       <section>
-        <div class="nav">
+        <div class="nav sidebar show-menu menu">
           <ul class="list-group">
             <li class="list-group-item">
               <div class="nav-icon-box">
@@ -138,8 +153,8 @@
           <div class="container-fluid py-2">
             <div class="col-md-12 py-3">
               <h3>Two Column</h3>
-              <div class="row">
-                <div class="col">
+              <div class="row py-2 column-gap-0">
+                <div class="col-md-6 col-sm-12 mb-2">
                   <div class="inputContainer">
                     <input
                       type="text"
@@ -150,7 +165,7 @@
                     <label for="floatingName" class="label">Name</label>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <div class="inputContainer">
                     <input
                       type="email"
@@ -162,8 +177,8 @@
                   </div>
                 </div>
               </div>
-              <div class="row py-3">
-                <div class="col">
+              <div class="row py-2 column-gap-0">
+                <div class="col-md-6 col-sm-12 mb-2">
                   <div class="inputContainer">
                     <input
                       type="password"
@@ -176,7 +191,7 @@
                     >
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <div class="inputContainer">
                     <select class="form-select input" aria-label="Default">
                       <option selected>Dropdown</option>
@@ -184,7 +199,6 @@
                       <option value="2">Two</option>
                       <option value="3">Three</option>
                     </select>
-                    <label for="" class="label">Dropdown</label>
                   </div>
                 </div>
               </div>
@@ -194,42 +208,44 @@
           <div class="container-fluid py-4">
             <div class="col-md-12">
               <h3>Three Column</h3>
-              <div class="row">
-                <div class="col">
-                  <div class="form-floating">
+              <div class="row column-gap-0">
+                <div class="col-md-4 col-sm-12 mb-4">
+                  <div class="inputContainer">
                     <input
                       type="email"
-                      class="form-control"
+                      class="input"
                       id="floatingInputEmail"
                       placeholder="name@example.com"
                     />
-                    <label for="floatingInputEmail">Focus</label>
+                    <label class="label" for="floatingInputEmail">Focus</label>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="form-floating">
+                <div class="col-md-4 col-sm-12 mb-4">
+                  <div class="inputContainer">
                     <input
                       type="text"
-                      class="form-control"
+                      class="input"
                       placeholder="Password"
-                      id="floatingInputPassword"
+                      id="floatingInputPass"
                       aria-label="Password"
                     />
-                    <label for="floatingInputPassword">Password</label>
+                    <label class="label" for="floatingInputPass"
+                      >Password</label
+                    >
                   </div>
                 </div>
-                <div class="col">
-                  <div class="form-floating">
+                <div class="col-md-4 col-sm-12 mb-2">
+                  <div class="inputContainer">
                     <input
                       type="text"
-                      class="form-control"
+                      class="input"
                       id="floatingInputDisabled"
                       disabled
                       placeholder="disabled"
                       aria-label="disabled"
                       style="border: 1px dashed #adadad"
                     />
-                    <label for="floatingInput">Disabled</label>
+                    <label for="floatingInput" class="label">Disabled</label>
                   </div>
                 </div>
               </div>
@@ -238,67 +254,66 @@
           <div class="container-fluid py-4">
             <div class="col-md-12">
               <h3>Four Column</h3>
-              <div class="row">
-                <div class="col">
-                  <div class="form-floating">
+              <div class="row column-gap-0">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                  <div class="inputContainer">
                     <input
                       type="text"
-                      class="form-control"
-                      id="validationServer03"
-                      aria-describedby="validationServer03Feedback"
-                      value="UI Designer"
+                      class="input"
+                      id="validationServer"
+                      aria-describedby="validationServerFeedback"
                       required
                     />
-                    <label for="validationServer03" class="form-label"
+                    <label for="validationServer" class="label"
                       >Designation</label
                     >
-                    <div id="validationServer03Feedback" class="form-text">
-                      Enter Valid data
-                    </div>
+                  </div>
+                  <div
+                    id="validationServerFeedback"
+                    class="form-text px-2"
+                    style="color: #c8242f"
+                  >
+                    Enter Valid data
                   </div>
                 </div>
 
-                <div class="col">
-                  <div class="form-floating">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                  <div class="inputContainer">
                     <input
                       type="text"
-                      class="form-control"
-                      id="validationServer03"
+                      class="input"
+                      id="validationServer02"
                       placeholder="Name"
-                      aria-describedby="validationServer03Feedback"
+                      aria-describedby="validationServer02Feedback"
                       required
                     />
-                    <label for="validationServer03">Name</label>
-                    <div id="validationServer03Feedback" class="form-text">
-                      Enter your full Name as per ID
-                    </div>
+                    <label for="validationServer02" class="label">Name</label>
+                  </div>
+                  <div id="validationServer02Feedback" class="form-text px-2">
+                    Enter your full Name as per ID
                   </div>
                 </div>
 
-                <div class="col">
-                  <div class="form-floating">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                  <div class="inputContainer">
                     <input
                       type="email"
-                      class="form-control"
-                      id="floatingUserName"
-                      value="johndoe"
+                      class="input"
+                      id="floatUserName"
                       required
                     />
-                    <label for="floatingUserName" class="form-label"
-                      >Username</label
-                    >
+                    <label for="floatUserName" class="label">Username</label>
                   </div>
                 </div>
 
-                <div class="col">
-                  <div class="form-floating">
-                    <select id="" class="form-select" aria-label="Default">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                  <div class="inputContainer">
+                    <select id="" class="input" aria-label="Default">
                       <option selected>Select</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
                       <option value="3">Three</option>
                     </select>
-                    <label for="">Dropdown</label>
                   </div>
                 </div>
               </div>
@@ -313,84 +328,52 @@
                 <h4>File Upload</h4>
 
                 <div class="input-group">
-                  <button
-                    class="btn btn-outline-danger upload-btn"
-                    type="button"
-                    id="inputGroupFileAddon03"
-                    onclick="document.getElementById('getFile').click()"
+                  <input type="file" id="getFile" hidden />
+                  <label for="getFile"
+                    ><img src="./images/cloud-upload-icon.svg" />Upload</label
                   >
-                    <img src="./images/cloud-upload-icon.svg" /> Upload
-                  </button>
-
-                  <input type="file" id="getFile" style="display: none" />
-
-                  <div class="form-text my-2 px-2">No item selected</div>
+                  <span id="file-chosen">No item selected</span>
                 </div>
               </div>
 
               <div class="row mt-2">
                 <h4>Radio Button</h4>
-                <div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Option 1
-                    </label>
+                <div class="d-flex gx-0">
+                  <div class="form-check">
+                    <input type="radio" name="colors" id="Red" value="Red" />
+                    <label class="label-color" for="Red"> Option 1 </label>
                   </div>
-                  <div class="form-check form-check-inline">
+                  <div class="form-check">
                     <input
-                      class="form-check-input"
                       type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault2"
+                      name="colors"
+                      id="Red2"
                       checked
-                      value="red"
+                      value="Red"
                     />
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Option 2
-                    </label>
+                    <label class="label-color" for="Red2"> Option 2 </label>
                   </div>
                 </div>
               </div>
 
               <div class="row mt-2">
                 <h4>Checkbox</h4>
-                <div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="inlineCheckbox1"
-                      value="option1"
-                    />
-                    <label class="form-check-label" for="inlineCheckbox1"
-                      >Option 1</label
-                    >
+                <div class="d-flex gx-0">
+                  <div class="form-check">
+                    <input type="checkbox" id="Red3" value="option1" />
+                    <label class="label-color" for="Red3">Option 1</label>
                   </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="inlineCheckbox2"
-                      value="option2"
-                      checked
-                    />
-                    <label class="form-check-label" for="inlineCheckbox2"
-                      >Option 2</label
-                    >
+                  <div class="form-check">
+                    <input type="checkbox" id="Red4" value="option2" checked />
+                    <label class="label-color" for="Red4">Option 2</label>
                   </div>
                 </div>
               </div>
 
               <div class="row mt-2">
                 <h4>Snackbar</h4>
-                <div class="row snackbar">
-                  <div class="col-sm-12 col-md-6 snack error-snack">
+                <div class="snackbar">
+                  <div class="snack error-snack">
                     <img
                       class="snack-img"
                       src="./images/error-icon.svg"
@@ -398,7 +381,7 @@
                     />
                     <p class="snack-txt">This is an error Message!</p>
                   </div>
-                  <div class="col snack info-snack">
+                  <div class="snack info-snack">
                     <img
                       class="snack-img"
                       src="./images/info-icon.svg"
@@ -406,9 +389,8 @@
                     />
                     <p class="snack-txt">This is an information Message!</p>
                   </div>
-                </div>
-                <div class="row snackbar">
-                  <div class="col-sm-12 col-md-6 snack warning-snack">
+
+                  <div class="snack warning-snack">
                     <img
                       class="snack-img"
                       src="./images/warning-icon.svg"
@@ -416,7 +398,7 @@
                     />
                     <p class="snack-txt">This is a warning Message!</p>
                   </div>
-                  <div class="col snack success-snack">
+                  <div class="snack success-snack">
                     <img
                       class="snack-img"
                       src="./images/success-icon.svg"
@@ -429,10 +411,71 @@
 
               <div class="row mt-2">
                 <h4>Call to Action</h4>
+                <div class="d-flex column-gap-3">
+                  <button class="btn-danger cta">Primary</button>
+                  <button class="btn-outline-danger cta">Secondary</button>
+                </div>
               </div>
 
               <div class="row mt-2">
                 <h4>Tabs</h4>
+                <div class="mt-2">
+                  <ul class="nav nav-tabs" id="myTab">
+                    <li class="nav-item">
+                      <a
+                        href="#tab-1"
+                        class="nav-link active"
+                        data-bs-toggle="tab"
+                        >Tab 1</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#tab-2" class="nav-link" data-bs-toggle="tab"
+                        >Tab 2</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#tab-3" class="nav-link" data-bs-toggle="tab"
+                        >Tab 3</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="tab-content mt-4">
+                    <div class="tab-pane fade show active" id="tab-1">
+                      <p>
+                        Aliquip placeat salvia cillum iphone. Seitan aliquip
+                        quis cardigan american apparel, butcher voluptate nisi
+                        qui. Raw denim you probably haven't heard of them jean
+                        shorts Austin. Nesciunt tofu stumptown aliqua, retro
+                        synth master cleanse. Mustache cliche tempor,
+                        williamsburg carles vegan helvetica. Reprehenderit
+                        butcher retro keffiyeh dreamcatcher synth.
+                      </p>
+                    </div>
+                    <div class="tab-pane fade" id="tab-2">
+                      <p>
+                        Vestibulum nec erat eu nulla rhoncus fringilla ut non
+                        neque. Vivamus nibh urna, ornare id gravida ut, mollis a
+                        magna. Aliquam porttitor condimentum nisi, eu viverra
+                        ipsum porta ut. Nam hendrerit bibendum turpis, sed
+                        molestie mi fermentum id. Aenean volutpat velit sem. Sed
+                        consequat ante in rutrum convallis. Nunc facilisis leo
+                        at faucibus adipiscing.
+                      </p>
+                    </div>
+                    <div class="tab-pane fade" id="tab-3">
+                      <p>
+                        Donec vel placerat quam, ut euismod risus. Sed a mi
+                        suscipit, elementum sem a, hendrerit velit. Donec at
+                        erat magna. Sed dignissim orci nec eleifend egestas.
+                        Donec eget mi consequat massa vestibulum laoreet. Mauris
+                        et ultrices nulla, malesuada volutpat ante. Fusce ut
+                        orci lorem. Donec molestie libero in tempus imperdiet.
+                        Cum sociis natoque penatibus et magnis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -440,6 +483,8 @@
       </section>
     </div>
 
+    <!-- JS -->
+    <script src="./js/custom.js"></script>
     <!-- Bootstrap JS -->
     <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
