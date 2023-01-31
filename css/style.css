@@ -192,6 +192,16 @@ header {
   display: flex;
   align-items: center;
   margin-right: auto;
+  column-gap: 1rem;
+}
+
+.left-header button {
+  border: none;
+  background-color: white;
+}
+
+.closeIcon {
+  display: none;
 }
 
 .left-header .header-logo {
@@ -199,7 +209,8 @@ header {
 }
 
 .left-header .header-logo img {
-  height: 2rem;
+  width: 80%;
+  min-width: 132px;
 }
 
 .left-header .search-box {
@@ -222,6 +233,10 @@ header {
 
 .search-box input:focus {
   outline: none;
+}
+
+.search-box input::placeholder {
+  color: #adadad;
 }
 
 .right-header {
@@ -256,6 +271,20 @@ section {
   display: flex;
 }
 /* Nav */
+.sidebar {
+  background-color: #fff;
+}
+
+.show-menu {
+  transform: translateX(0);
+  transition: all 500ms ease-in-out;
+}
+.hide-menu {
+  position: absolute;
+  transform: translateX(-100%);
+  transition: all 500ms ease-in-out;
+}
+
 nav {
   background: #fff;
 }
@@ -322,6 +351,7 @@ article .row {
   display: flex;
   padding: 5px 15px 5px 5px;
   align-items: center;
+  justify-content: center;
   border-radius: 5px;
   background-color: #fff;
   min-width: max-content;
@@ -376,6 +406,10 @@ article .row {
   font-size: 15px;
   line-height: 20px;
   color: #adadad;
+}
+.data-graph-title p .active-tab {
+  color: #c8242f;
+  border-bottom: 2px solid #c8242f;
 }
 
 .sales-stats img {
@@ -475,12 +509,14 @@ tr {
 }
 
 @media screen and (max-width: 991px) {
-  div .nav {
+  .sidebar {
     position: absolute;
-    transform: translateX(-100%);
-    transition: all 500ms ease-in-out;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    height: 100%;
   }
-
   .sales-stats {
     grid-template-columns: 1fr;
   }
@@ -493,6 +529,9 @@ tr {
 }
 
 @media screen and (max-width: 768px) {
+  .search-box {
+    display: none !important;
+  }
   .profile-box span {
     display: none;
   }
@@ -504,6 +543,9 @@ tr {
   }
   .invoices {
     max-width: 100%;
+  }
+  .table {
+    font-size: 12px;
   }
 }
 
@@ -552,7 +594,7 @@ tr {
   top: 14px;
   left: 15px;
   padding: 0 4px;
-  background-color: white;
+  background-color: #fafafa;
   color: #adadad;
 }
 
@@ -569,27 +611,60 @@ tr {
   color: #adadad;
 }
 
+.input:focus {
+  outline: 1px solid #c8242f;
+  border: none;
+}
+
 .input:focus + .label {
   top: -8px;
   left: 8px;
   z-index: 10;
   font-size: 12px;
+  color: #c8242f;
 }
 
-/* [type="radio"]:checked + label:after {
-  background-color: red;
-  border: 2px solid red;
-} */
+.input-group label {
+  border-radius: 18px !important;
+  height: 36px;
+  width: 124px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c8242f;
+  color: #c8242f;
+  column-gap: 0.2rem;
+}
+
+#file-chosen {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #adadad;
+}
+
+input[type="radio"]#Red,
+input[type="radio"]#Red2,
+input[type="checkbox"]#Red3,
+input[type="checkbox"]#Red4 {
+  accent-color: #c8242f;
+}
 
 .snackbar {
   margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .snack {
   height: 44px;
+  width: 90%;
   border-radius: 5px;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  padding-left: 10px;
 }
 .error-snack {
   color: #ff3535;
@@ -618,10 +693,48 @@ tr {
   padding-left: 5px;
 }
 
-.upload-btn {
-  border-radius: 18px !important;
+.cta {
+  height: 44px;
+  border-radius: 23px;
+  padding: 0 30px;
+  font-size: 18px;
+  line-height: 24px;
+}
+.btn-danger {
+  color: #fff;
+  border: 1px solid transparent;
+  background-color: #c8242f;
+}
+.btn-outline-danger {
+  color: #c8242f;
+  border: 1px solid #c8242f;
+}
+.btn-danger:hover {
+  color: #c8242f;
+  border: 1px solid #c8242f;
+  background-color: #fff;
+}
+.btn-outline-danger:hover {
+  color: #fff;
+  border: none;
+  background-color: #c8242f;
 }
 
+#myTab .nav-item a {
+  color: #adadad;
+}
+
+#myTab .nav-item .active {
+  color: #c8242f;
+  border: none;
+  border-bottom: 3px solid #c8242f;
+}
+
+.tab-content p {
+  font-size: 15px;
+  line-height: 24px;
+  color: #3e3e3e;
+}
 /*----- MEDIA QUERIES ------*/
 
 @media screen and (max-width: 1080px) {
@@ -631,4 +744,7 @@ tr {
 }
 
 @media screen and (max-width: 768px) {
+  .snackbar {
+    grid-template-columns: 1fr;
+  }
 }
