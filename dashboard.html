@@ -17,9 +17,18 @@
     <div class="container-fluid">
       <header class="d-flex container-fluid">
         <div class="left left-header">
-          <a href="#" class="hamburger-icon mx-4"
-            ><img class="icon" src="./images/menu-bar.svg"
-          /></a>
+          <button href="#" class="hamburger-icon mx-1" id="hamburger">
+            <img
+              class="icon menuIcon"
+              src="./images/menu-bar.svg"
+              onclick="openCloseSidebar()"
+            />
+            <img
+              class="icon closeIcon"
+              src="./images/close.png"
+              onclick="openCloseSidebar()"
+            />
+          </button>
 
           <a href="./index.html" class="header-logo"
             ><img src="./images/logo.svg"
@@ -55,7 +64,7 @@
         </div>
       </header>
       <section>
-        <div class="nav">
+        <div class="nav sidebar show-menu menu">
           <ul class="list-group">
             <li class="list-group-item">
               <div class="nav-icon-box icon-box-active">
@@ -168,7 +177,7 @@
 
                 <p>Weekly</p>
                 <p>Monthly</p>
-                <p>Yearly</p>
+                <p class="active-tab">Yearly</p>
               </div>
               <img src="./images/data-graph.png" />
             </div>
@@ -313,6 +322,8 @@
       </section>
     </div>
 
+    <!-- Custom JS -->
+    <script src="./js/custom.js"></script>
     <!-- Bootstrap JS -->
     <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
